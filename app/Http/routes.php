@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-	echo "Hello Gerald!";
-});
+Route::get('/', 'BlogController@index')->name('Home');
+
+/*
+ | CRUD for blog
+*/
+Route::get('post', 'BlogController@userCreatePost')->name('Post\Create');
+Route::get('post/{id}', 'BlogController@userGetPost')->name('Post\Read');
