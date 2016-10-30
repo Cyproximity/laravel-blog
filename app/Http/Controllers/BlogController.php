@@ -25,10 +25,20 @@ class BlogController extends Controller
    */
 	public function userCreatePost()
   {
-
     return view('blog.create');
   }
 
+  /**
+   * @return for blog post method
+   */
+  public function userStorePost()
+  {
+    $blog = new Blog(request()->all());
+
+    $blog->save();
+
+    return redirect('/');
+  }
   /**
    * @return default read post view
    */

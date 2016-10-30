@@ -14,7 +14,7 @@
       @foreach ($blogs as $blog)
         <article class="col-md-offset-1 col-md-6">
           <h3 class="h3">
-            <a href="">{{$blog->title}}</a>
+            <a href="{{route('Post\Read',[$blog->id])}}">{{$blog->title}}</a>
             <small>{{Carbon\Carbon::parse($blog->created_at)->format('d-m-Y i')}}</small>
           </h3>
           <p>{{$blog->body}}</p>

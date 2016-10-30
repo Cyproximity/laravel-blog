@@ -12,7 +12,6 @@ class Blog extends Model
    */
   public $table = "Blog";
 
-
   /**
    * insertable and editable rows
    * @var array

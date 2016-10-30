@@ -17,4 +17,6 @@ Route::get('/', 'BlogController@index')->name('Home');
  | CRUD for blog
 */
 Route::get('post', 'BlogController@userCreatePost')->name('Post\Create');
+  Route::post('post/store', 'BlogController@userStorePost')->name('Post\Create\Store');
+
 Route::get('post/{id}', 'BlogController@userGetPost')->name('Post\Read');
